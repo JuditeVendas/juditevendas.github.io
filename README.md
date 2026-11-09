@@ -1,0 +1,39 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/juditevendas-logo-dark.svg">
+    <img src="assets/juditevendas-logo.svg" alt="JuditeVendas" width="420">
+  </picture>
+</p>
+
+<p align="center">
+  Anúncios, site e relatório semanal para negócios locais.<br>
+  <a href="https://juditevendas.github.io">juditevendas.github.io</a>
+</p>
+
+## O que é
+
+Site institucional da JuditeVendas. É uma página estática em HTML, CSS e JavaScript, sem etapa de build, publicada pelo GitHub Pages a partir da branch `main`.
+
+## Como editar
+
+| O que mudar | Onde |
+|---|---|
+| WhatsApp, e-mail e Instagram | Objeto `CONFIG`, no `<script>` do fim do `index.html` |
+| Textos e seções | Direto no `index.html`. Cada seção começa com um comentário, como `<!-- SOBRE -->` e `<!-- SERVIÇOS -->` |
+| Cores | Variáveis no início do `<style>`: `--brand`, `--btn`, `--band-a` e as demais |
+| Logos e ícone | Pasta `assets/` |
+
+Depois de editar, faça commit e push na `main`. O GitHub Pages atualiza o site em cerca de um minuto.
+
+Para ver no computador antes de subir, abra o `index.html` no navegador.
+
+## Formulário de contato
+
+O formulário não envia nada para servidor. Ele monta uma mensagem com os dados do visitante e abre o WhatsApp da JuditeVendas com o texto pronto. Enquanto `CONFIG.whatsapp` estiver vazio, a página só mostra a mensagem e o botão de copiar.
+
+## Pendências
+
+- [ ] Preencher WhatsApp, e-mail e Instagram no `CONFIG`
+- [ ] Revisar os compromissos da faixa de números: diagnóstico em 48h, site em 7 dias, 1 relatório por semana, sem fidelidade
+- [ ] Trocar a seção "Para quem é" ou somar depoimentos reais quando houver clientes
+- [ ] Opcional: domínio próprio, com arquivo `CNAME` e ajuste de DNS

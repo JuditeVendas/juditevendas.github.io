@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JuditeVendas | Tráfego pago e site para negócios locais</title>
+<meta name="description" content="Anúncios no Instagram, no Facebook e no Google, site e relatório semanal para negócios locais. Peça um diagnóstico gratuito.">
+<meta name="theme-color" content="#1f1b19">
+<link rel="canonical" href="https://juditevendas.github.io/">
+<link rel="icon" type="image/svg+xml" href="assets/juditevendas-icone.svg">
+<link rel="icon" type="image/png" sizes="1024x1024" href="assets/juditevendas-icone.png">
+<link rel="apple-touch-icon" href="assets/juditevendas-icone.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="JuditeVendas">
+<meta property="og:title" content="JuditeVendas">
+<meta property="og:description" content="Anúncios no Instagram, no Facebook e no Google, site e relatório semanal para negócios locais. Peça um diagnóstico gratuito.">
+<meta property="og:url" content="https://juditevendas.github.io/">
+<meta property="og:image" content="https://juditevendas.github.io/assets/juditevendas-social.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap">
+<style>[hidden]{display:none!important}</style>
+<style>
+/* Layout: site institucional em faixas largas, no modelo de referência: hero escuro com carrossel, cartão de diagnóstico sobreposto, faixas brancas e lavanda alternadas, faixa de números em gradiente, rodapé escuro */
+:root{
+  --brand:#b83e1b;
+  --brand-2:#e2552d;
+  --enfase:rgba(226,85,45,.12);
+  --band-a:#b83e1b;
+  --band-b:#cf4a24;
+  --on-band:#ffffff;
+  --btn:#c9461f;
+  --btn-hover:#b23c19;
+  --on-btn:#ffffff;
+
+  --bg:#ffffff;
+  --bg-alt:#f7f5f3;
+  --bg-lav:#fcf1ea;
+  --surface:#ffffff;
+  --ink:#24201d;
+  --muted:#5f5752;
+  --soft:#857c76;
+  --line:#ebe4de;
+
+  --night:#1f1b19;
+  --night-glass:rgba(31,27,25,.95);
+  --on-night:#f4efe9;
+  --on-night-muted:#bdb3ab;
+  --night-line:rgba(255,255,255,.14);
+  --night-pill:rgba(255,255,255,.1);
+  --hero-enfase:rgba(226,85,45,.3);
+  --glow-a:rgba(226,85,45,.42);
+  --glow-b:rgba(242,158,82,.22);
+  --grid-dot:rgba(255,255,255,.06);
+
+  --glass:rgba(255,255,255,.88);
+  --glass-edge:rgba(255,255,255,.9);
+  --shadow:0 20px 27px rgba(36,32,29,.07);
+  --shadow-lg:0 30px 60px rgba(20,14,10,.3);
+
+  --m-1:rgba(226,85,45,.30);
+  --m-2:rgba(255,206,120,.45);
+  --m-3:rgba(238,122,58,.26);
+  --m-4:rgba(214,80,110,.18);
+
+  --wa:#168a4a;
+  --on-wa:#ffffff;
+  --phone-frame:#12100f;
+  --phone-screen:#ffffff;
+  --phone-ink:#24201d;
+  --phone-muted:#6e6660;
+  --phone-hero-a:#fde3d3;
+  --phone-hero-b:#fbd2c6;
+  --phone-line:#efe9e4;
+
+  --font:"Nunito Sans","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --r-btn:3px;
+  --r-card:15px;
+  --r-box:10px;
+  --container:1140px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --brand:#f2845a;
+    --brand-2:#f0703f;
+    --enfase:rgba(240,112,63,.16);
+    --band-a:#a63817;
+    --band-b:#c4441f;
+    --btn:#c9461f;
+    --btn-hover:#d9522a;
+    --bg:#141110;
+    --bg-alt:#1a1715;
+    --bg-lav:#221a17;
+    --surface:#211c1a;
+    --ink:#f4efe9;
+    --muted:#bbb1a9;
+    --soft:#978d86;
+    --line:#352e2a;
+    --night:#0e0c0b;
+    --night-glass:rgba(14,12,11,.95);
+    --glass:rgba(33,28,26,.9);
+    --glass-edge:rgba(255,255,255,.07);
+    --shadow:0 20px 27px rgba(0,0,0,.35);
+    --shadow-lg:0 30px 60px rgba(0,0,0,.5);
+    --m-1:rgba(226,85,45,.18);
+    --m-2:rgba(255,206,120,.08);
+    --m-3:rgba(238,122,58,.14);
+    --m-4:rgba(214,80,110,.1);
+    --wa:#1e9a56;
+    --phone-frame:#050404;
+    --phone-screen:#211c1a;
+    --phone-ink:#f4efe9;
+    --phone-muted:#bbb1a9;
+    --phone-hero-a:#4b2c22;
+    --phone-hero-b:#3f2a2c;
+    --phone-line:#352e2a;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --brand:#f2845a;
+  --brand-2:#f0703f;
+  --enfase:rgba(240,112,63,.16);
+  --band-a:#a63817;
+  --band-b:#c4441f;
+  --btn:#c9461f;
+  --btn-hover:#d9522a;
+  --bg:#141110;
+  --bg-alt:#1a1715;
+  --bg-lav:#221a17;
+  --surface:#211c1a;
+  --ink:#f4efe9;
+  --muted:#bbb1a9;
+  --soft:#978d86;
+  --line:#352e2a;
+  --night:#0e0c0b;
+  --night-glass:rgba(14,12,11,.95);
+  --glass:rgba(33,28,26,.9);
+  --glass-edge:rgba(255,255,255,.07);
+  --shadow:0 20px 27px rgba(0,0,0,.35);
+  --shadow-lg:0 30px 60px rgba(0,0,0,.5);
+  --m-1:rgba(226,85,45,.18);
+  --m-2:rgba(255,206,120,.08);
+  --m-3:rgba(238,122,58,.14);
+  --m-4:rgba(214,80,110,.1);
+  --wa:#1e9a56;
+  --phone-frame:#050404;
+  --phone-screen:#211c1a;
+  --phone-ink:#f4efe9;
+  --phone-muted:#bbb1a9;
+  --phone-hero-a:#4b2c22;
+  --phone-hero-b:#3f2a2c;
+  --phone-line:#352e2a;
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--night)}
+h1,h2,h3,h4{margin:0;line-height:1.2;text-wrap:balance;color:inherit}
+p{margin:0}
+a{color:var(--brand)}
+img,svg{max-width:100%}
+:focus-visible{outline:3px solid var(--brand-2);outline-offset:3px;border-radius:4px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.container{width:100%;max-width:calc(var(--container) + 32px);margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 26px;border:0;border-radius:var(--r-btn);background:var(--btn);color:var(--on-btn);font:inherit;font-weight:700;font-size:1rem;line-height:1.2;text-decoration:none;cursor:pointer;transition:background-color .2s,transform .2s}
+.btn:hover{background:var(--btn-hover)}
+.btn:active{transform:translateY(1px)}
+.btn-lg{padding:15px 30px}
+.btn-pill{border-radius:50px}
+.btn-ghost{background:transparent;color:var(--on-night);box-shadow:inset 0 0 0 1px var(--night-line)}
+.btn-ghost:hover{background:var(--night-pill)}
+.btn-wa{background:var(--wa);color:var(--on-wa)}
+.btn-wa:hover{background:var(--wa);filter:brightness(1.08)}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.btn-line:hover{background:var(--bg-alt)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Cabeçalho de seção */
+.subheading{display:inline-block;color:var(--brand);font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.heading{display:grid;gap:12px;max-width:660px;margin:0 auto 48px;text-align:center}
+.heading h2,.h2{font-size:clamp(1.65rem,1.2rem + 1.6vw,2.3rem);font-weight:800;letter-spacing:-.01em}
+.heading p{color:var(--muted);font-size:1.0625rem}
+.enfase{background:var(--enfase);border-radius:3px;padding:0 .25em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.tag{display:inline-flex;align-items:center;padding:3px 10px;border-radius:50px;background:var(--enfase);color:var(--brand);font-size:.6875rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+
+.section{padding-block:96px}
+@media (max-width:720px){.section{padding-block:64px}}
+
+/* ---------- Navegação ---------- */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--night-glass);-webkit-backdrop-filter:saturate(180%) blur(14px);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--night-line)}
+.nav-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:70px}
+.brand{display:inline-flex;align-items:center;text-decoration:none;flex:none;min-width:0}
+.logo{display:block;height:40px;width:auto;max-width:100%}
+@media (max-width:600px){.logo{height:32px}}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
+.nav-links a{display:block;padding:8px 15px;border-radius:35px;color:var(--on-night-muted);font-weight:600;font-size:.9375rem;text-decoration:none;transition:color .2s,background-color .2s}
+.nav-links a:hover{color:var(--on-night)}
+.nav-links a.is-active{color:var(--on-night);background:var(--night-pill);box-shadow:inset 0 0 2px var(--night-line)}
+.nav-cta{min-height:42px;padding:10px 20px;font-size:.9375rem}
+.nav-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:0;border-radius:8px;background:var(--night-pill);color:var(--on-night);cursor:pointer}
+.nav-toggle svg{width:22px;height:22px}
+.nav-mobile-cta{display:none}
+@media (max-width:960px){
+  .nav-toggle{display:inline-flex}
+  .nav-cta{display:none}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;padding:12px max(16px,env(safe-area-inset-right,0px)) 20px max(16px,env(safe-area-inset-left,0px));background:var(--night);border-bottom:1px solid var(--night-line)}
+  .nav-links.is-open{display:flex}
+  .nav-links a{padding:12px 16px}
+  .nav-mobile-cta{display:block;margin-top:8px}
+  .nav-mobile-cta .btn{width:100%}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;isolation:isolate;overflow:hidden;background:var(--night);color:var(--on-night)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(55% 75% at 88% 18%,var(--glow-a),transparent 62%),radial-gradient(45% 65% at 6% 96%,var(--glow-b),transparent 60%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background-image:radial-gradient(var(--grid-dot) 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 95%);mask-image:linear-gradient(180deg,#000 30%,transparent 95%)}
+.hero-inner{padding-block:72px 168px}
+.slides{display:grid}
+.slide{grid-area:1/1;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:56px;align-items:center;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s ease}
+.slide.is-active{opacity:1;visibility:visible}
+.slide-text{display:grid;gap:22px;min-width:0}
+.slide-text .subheading{color:var(--brand-2)}
+.hero h1{font-size:clamp(2.05rem,1.35rem + 2.8vw,3.4rem);font-weight:800;letter-spacing:-.02em;line-height:1.12}
+.hero h1 .enfase{background:var(--hero-enfase)}
+.lead{max-width:34em;color:var(--on-night-muted);font-size:1.125rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.slide-visual{display:flex;justify-content:center;min-width:0}
+
+.car-controls{display:flex;align-items:center;gap:14px;margin-top:40px}
+.car-arrow{display:inline-grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;background:var(--night-pill);color:var(--on-night);cursor:pointer;transition:background-color .2s}
+.car-arrow:hover{background:var(--night-line)}
+.car-arrow svg{width:18px;height:18px}
+.dots{display:flex;gap:8px}
+.dot{width:10px;height:10px;padding:0;border:0;border-radius:10px;background:var(--night-line);cursor:pointer;transition:width .3s,background-color .3s}
+.dot[aria-current="true"]{width:28px;background:var(--brand-2)}
+
+/* Cartões ilustrativos do hero */
+.viz{width:100%;max-width:400px;padding:24px;border-radius:var(--r-card);background:var(--surface);color:var(--ink);box-shadow:var(--shadow-lg)}
+.viz-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.viz-title{font-weight:800;font-size:1.0625rem}
+.viz-sub{margin-top:2px;color:var(--soft);font-size:.8125rem}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.kpi{display:grid;gap:2px;padding:12px 14px;border-radius:var(--r-box);background:var(--bg-alt)}
+.kpi .k{color:var(--muted);font-size:.75rem;font-weight:600}
+.kpi .v{font-size:1.25rem;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.kpi.hl{background:var(--enfase)}
+.kpi.hl .v{color:var(--brand)}
+.chart-label{margin-top:18px;color:var(--muted);font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.bars{display:flex;align-items:flex-end;gap:8px;height:112px;margin-top:8px;padding-bottom:22px;border-bottom:1px solid var(--line);position:relative}
+.bar{position:relative;flex:1;min-width:0;border-radius:5px 5px 2px 2px;background:linear-gradient(180deg,var(--brand-2),var(--brand))}
+.bar b{position:absolute;bottom:100%;left:0;right:0;margin-bottom:3px;text-align:center;font-size:.75rem;font-weight:800;font-variant-numeric:tabular-nums;color:var(--ink)}
+.bar i{position:absolute;top:100%;left:-4px;right:-4px;margin-top:5px;text-align:center;font-style:normal;font-size:.6875rem;color:var(--soft)}
+.bars-wide{height:150px;gap:18px}
+.bars-wide .bar b{font-size:.8125rem}
+.viz-foot{margin-top:30px;color:var(--soft);font-size:.75rem}
+
+.phone-wrap{position:relative;display:flex;justify-content:center;width:100%;max-width:400px}
+.phone{width:236px;max-width:100%;padding:10px;border-radius:34px;background:var(--phone-frame);box-shadow:var(--shadow-lg)}
+.screen{overflow:hidden;border-radius:26px;background:var(--phone-screen);color:var(--phone-ink)}
+.ph-bar{display:flex;align-items:center;justify-content:space-between;padding:12px 14px 10px;font-size:.6875rem;font-weight:800}
+.ph-bar span:last-child{color:var(--phone-muted);font-weight:600}
+.ph-hero{margin:0 10px;padding:18px 14px;border-radius:14px;background:linear-gradient(135deg,var(--phone-hero-a),var(--phone-hero-b))}
+.ph-hero strong{display:block;font-size:.9375rem;line-height:1.25}
+.ph-hero small{display:block;margin-top:4px;color:var(--phone-muted);font-size:.6875rem;line-height:1.4}
+.ph-btn{display:flex;align-items:center;justify-content:center;gap:6px;margin:12px 10px 6px;padding:9px;border-radius:8px;background:var(--wa);color:var(--on-wa);font-size:.75rem;font-weight:800}
+.ph-btn svg{width:14px;height:14px}
+.ph-list{margin:6px 10px 14px;padding:0;list-style:none}
+.ph-list li{display:flex;justify-content:space-between;gap:8px;padding:9px 2px;border-bottom:1px solid var(--phone-line);font-size:.6875rem;font-weight:600}
+.ph-list li:last-child{border-bottom:0}
+.ph-list span:last-child{font-variant-numeric:tabular-nums;color:var(--phone-muted)}
+.chip-float{position:absolute;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:50px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow-lg);font-size:.8125rem;font-weight:700;white-space:nowrap}
+.chip-float svg{width:16px;height:16px;color:var(--brand)}
+.chip-1{top:34px;left:0}
+.chip-2{bottom:46px;right:0}
+.phone-tag{position:absolute;top:0;right:12px}
+
+/* ---------- Atalho (cartão sobreposto) ---------- */
+.atalho{position:relative;z-index:3;margin-top:-104px}
+.atalho-card{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,2fr);gap:28px;align-items:center;padding:28px 30px;border-radius:var(--r-card);background:var(--glass);-webkit-backdrop-filter:saturate(200%) blur(30px);backdrop-filter:saturate(200%) blur(30px);box-shadow:inset 0 0 1px 1px var(--glass-edge),var(--shadow)}
+.atalho-card h3{font-size:1.25rem;font-weight:800}
+.atalho-card p{margin-top:4px;color:var(--muted);font-size:.9375rem;line-height:1.5}
+.atalho-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:12px}
+
+/* Campos */
+.field{display:grid;gap:6px;min-width:0}
+.field label{font-size:.8125rem;font-weight:700;color:var(--ink)}
+.input{width:100%;min-height:48px;padding:10px 14px;border:1px solid var(--line);border-radius:var(--r-btn);background:var(--surface);color:var(--ink);font:inherit;font-size:.9375rem;transition:border-color .2s,box-shadow .2s}
+.input::placeholder{color:var(--soft)}
+.input:focus{outline:0;border-color:var(--brand-2);box-shadow:0 0 0 3px var(--enfase)}
+textarea.input{min-height:110px;resize:vertical;line-height:1.5}
+select.input{appearance:none;-webkit-appearance:none;padding-right:38px;background-image:linear-gradient(45deg,transparent 50%,var(--soft) 50%),linear-gradient(135deg,var(--soft) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 15px) 50%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+
+/* ---------- Sobre ---------- */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.duo{position:relative;display:grid;gap:18px;padding:28px;border-radius:var(--r-card);background:var(--bg-lav)}
+.role{display:grid;gap:10px;padding:22px;border-radius:12px;background:var(--surface);box-shadow:var(--shadow)}
+.role-top{display:flex;align-items:center;gap:12px}
+.icon-box{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:var(--r-box);background:var(--enfase);color:var(--brand);flex:none}
+.icon-box svg{width:22px;height:22px}
+.role small{display:block;color:var(--brand);font-size:.6875rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.role h3{font-size:1.0625rem;font-weight:800}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{padding:4px 10px;border-radius:50px;background:var(--bg-alt);color:var(--muted);font-size:.75rem;font-weight:700}
+.plus{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(45deg,var(--band-a),var(--band-b));color:var(--on-band);font-size:1.375rem;font-weight:800;box-shadow:0 0 0 6px var(--bg-lav)}
+.about-text{display:grid;gap:18px}
+.about-text p{color:var(--muted);font-size:1.0625rem;max-width:34em}
+.checks{display:grid;gap:12px;margin:6px 0 0;padding:0;list-style:none}
+.checks li{display:flex;align-items:flex-start;gap:12px;font-weight:600}
+.checks svg{width:22px;height:22px;flex:none;margin-top:1px;color:var(--brand)}
+
+/* ---------- Faixa de números ---------- */
+.band{background:linear-gradient(45deg,var(--band-a) 0%,var(--band-b) 100%);color:var(--on-band)}
+.band-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;padding-block:56px}
+.stat{display:grid;gap:4px;text-align:center}
+.stat strong{font-size:clamp(2rem,1.6rem + 1.4vw,2.75rem);font-weight:900;letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{font-size:.9375rem;opacity:.88;line-height:1.45}
+
+/* ---------- Serviços ---------- */
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.service{display:grid;align-content:start;gap:14px;padding:28px;border:1px solid var(--line);border-radius:12px;background:var(--surface);transition:transform .25s,box-shadow .25s,border-color .25s}
+.service:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:transparent}
+.service h3{font-size:1.125rem;font-weight:800}
+.service p{color:var(--muted);font-size:.9375rem;line-height:1.65}
+
+/* ---------- Como medimos ---------- */
+.bg-alt{background:var(--bg-alt)}
+.measure{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+.flow{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.flow li{position:relative;display:grid;grid-template-columns:46px minmax(0,1fr);gap:18px;padding-bottom:30px}
+.flow li:last-child{padding-bottom:0}
+.flow li:not(:last-child)::after{content:"";position:absolute;left:22px;top:52px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--brand-2),var(--line))}
+.flow h3{font-size:1.0625rem;font-weight:800}
+.flow p{margin-top:2px;color:var(--muted);font-size:.9375rem}
+.flow .chips{margin-top:10px}
+.flow .chips span{background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.report{padding:28px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--shadow)}
+.report-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}
+.report-head h3{font-size:1.125rem;font-weight:800}
+.report-head p{margin-top:2px;color:var(--soft);font-size:.8125rem}
+.table-wrap{overflow-x:auto}
+.rtable{width:100%;border-collapse:collapse;font-size:.9375rem}
+.rtable th{text-align:left;font-weight:600;color:var(--muted);padding:11px 0;border-bottom:1px solid var(--line)}
+.rtable td{text-align:right;font-weight:800;padding:11px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;white-space:nowrap}
+.rtable tr.hl th,.rtable tr.hl td{color:var(--brand);border-bottom:0;padding-top:14px}
+.rtable tr.hl td{font-size:1.125rem}
+.note{margin-top:14px;color:var(--soft);font-size:.8125rem;line-height:1.55}
+
+/* ---------- Como funciona ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin:0;padding:0;list-style:none;counter-reset:passo}
+.step{position:relative;display:grid;align-content:start;gap:12px}
+.step-n{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:linear-gradient(45deg,var(--band-a),var(--band-b));color:var(--on-band);font-size:1.25rem;font-weight:900;position:relative;z-index:1;box-shadow:0 0 0 8px var(--bg)}
+.step:not(:last-child)::after{content:"";position:absolute;top:26px;left:64px;right:-20px;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 14px)}
+.step h3{font-size:1.125rem;font-weight:800}
+.step p{color:var(--muted);font-size:.9375rem;line-height:1.65}
+
+/* ---------- Para quem é ---------- */
+.bg-fade{background:linear-gradient(180deg,var(--bg-lav) 0%,var(--bg) 90%)}
+.segments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.segment{display:grid;gap:8px;padding:24px 26px;border-radius:12px;background:var(--surface);box-shadow:var(--shadow)}
+.segment h3{display:flex;align-items:center;gap:10px;font-size:1.0625rem;font-weight:800}
+.segment h3::before{content:"";width:8px;height:8px;border-radius:50%;background:linear-gradient(45deg,var(--band-a),var(--band-b));flex:none}
+.segment p{color:var(--muted);font-size:.9375rem;line-height:1.6}
+
+/* ---------- Dúvidas ---------- */
+.faq{display:grid;gap:14px;max-width:820px;margin-inline:auto}
+.faq details{border-radius:6px;background:var(--surface);box-shadow:var(--shadow);border-left:4px solid var(--brand-2)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;font-size:1.0625rem;font-weight:700;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:10px;height:10px;flex:none;border-right:2px solid var(--brand);border-bottom:2px solid var(--brand);transform:rotate(45deg) translate(-2px,-2px);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(225deg) translate(-2px,-2px)}
+.faq details p{padding:0 22px 20px;color:var(--soft);font-size:.9688rem;line-height:1.7;max-width:64ch}
+
+/* ---------- Contato ---------- */
+.bg-modern{background-color:var(--bg);background-image:linear-gradient(180deg,transparent,var(--bg) 88%),radial-gradient(ellipse at top left,var(--m-1),transparent 50%),radial-gradient(ellipse at top right,var(--m-2),transparent 50%),radial-gradient(ellipse at center right,var(--m-3),transparent 50%),radial-gradient(ellipse at center left,var(--m-4),transparent 50%)}
+.contact{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.contact-text{display:grid;gap:16px}
+.contact-text > p{color:var(--muted);font-size:1.0625rem;max-width:32em}
+.contacts{display:grid;gap:14px;margin:12px 0 0;padding:0;list-style:none}
+.contacts li{display:flex;align-items:center;gap:14px}
+.contacts small{display:block;color:var(--soft);font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.contacts strong{font-weight:700}
+.form-card{display:grid;gap:16px;padding:30px;border-radius:var(--r-card);background:var(--glass);-webkit-backdrop-filter:saturate(200%) blur(30px);backdrop-filter:saturate(200%) blur(30px);box-shadow:inset 0 0 1px 1px var(--glass-edge),var(--shadow)}
+.form-card h3{font-size:1.25rem;font-weight:800}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.form-grid .full{grid-column:1/-1}
+.form-card .btn{width:100%}
+.hint{color:var(--soft);font-size:.8125rem;line-height:1.5}
+.result{display:grid;gap:12px;padding:18px;border-radius:12px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.result strong{font-size:1rem}
+.result pre{margin:0;padding:14px;border-radius:8px;background:var(--bg-alt);color:var(--ink);font:inherit;font-size:.875rem;line-height:1.55;white-space:pre-wrap;word-break:break-word}
+.result-actions{display:flex;flex-wrap:wrap;gap:10px}
+.result-actions .btn{width:auto;flex:1 1 180px}
+
+/* ---------- Rodapé ---------- */
+.footer{background:var(--night);color:var(--on-night-muted);font-size:.9375rem}
+.footer-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px;padding-block:72px 48px}
+.footer h4{margin-bottom:16px;color:var(--on-night);font-size:1rem;font-weight:800}
+.footer ul{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.footer a{color:var(--on-night-muted);text-decoration:none}
+.footer a:hover{color:var(--on-night)}
+.footer-about{display:grid;gap:16px;align-content:start}
+.footer-about p{max-width:28em;line-height:1.6}
+.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;border-top:1px solid var(--night-line);font-size:.8125rem}
+
+/* ---------- Responsivo ---------- */
+@media (max-width:1020px){
+  .atalho-card{grid-template-columns:1fr}
+  .services,.segments{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}
+  .step:nth-child(2)::after{display:none}
+  .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .slide{grid-template-columns:1fr;gap:36px}
+  .slide-visual{justify-content:flex-start}
+  .hero-inner{padding-block:48px 120px}
+  .atalho{margin-top:-72px}
+  .atalho-form{grid-template-columns:1fr 1fr}
+  .atalho-form .btn{grid-column:1/-1}
+  .about,.measure,.contact{grid-template-columns:1fr;gap:40px}
+  .band-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}
+}
+@media (max-width:600px){
+  .services,.segments,.steps{grid-template-columns:1fr}
+  .step::after{display:none}
+  .atalho-form,.form-grid{grid-template-columns:1fr}
+  .atalho-card,.form-card,.report,.duo{padding:22px}
+  .viz{padding:20px}
+  .chip-float{display:none}
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .hero-actions .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<!-- NAVEGAÇÃO -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#inicio" aria-label="JuditeVendas, início">
+<svg xmlns="http://www.w3.org/2000/svg" class="logo" aria-hidden="true" focusable="false" viewBox="0 0 890 190"><g transform="translate(109.0 98) rotate(-12) scale(1.0) translate(-65.0 -50.0)"><path d="M31 50C14 40 2 22 -16 18" fill="none" stroke="#F4EFE9" stroke-width="4.5" stroke-linecap="round"/><path d="M40 0H116Q130 0 130 14V86Q130 100 116 100H40Q34 100 30 95L3 58Q-2 50 3 42L30 5Q34 0 40 0ZM31 50m-10 0a10 10 0 1 0 20 0a10 10 0 1 0 -20 0Z" fill="#E2552D" fill-rule="evenodd"/><path d="M46.69 -53.69Q45.08 -53.49 43.96 -53.29Q42.84 -53.09 41.44 -52.73Q39.8 -52.29 39.34 -51.17Q38.88 -50.05 38.88 -48.61V-17.3Q38.88 -12.97 37.14 -9.37Q35.39 -5.77 32.35 -3.32Q29.27 -0.92 25.46 0.3Q21.66 1.52 17.34 1.52Q9.85 1.52 5.27 -2.08Q0.68 -5.69 0.68 -11.97Q0.68 -15.7 2.78 -18.14Q4.88 -20.58 8.57 -20.58Q12.05 -20.58 14.11 -18.54Q16.18 -16.5 16.18 -13.49Q16.18 -10.93 14.39 -8.75Q12.61 -6.57 10.33 -4.72V-4.2Q10.69 -3.4 11.89 -2.84Q13.09 -2.28 14.33 -2.28Q19.14 -2.28 21.88 -5.73Q24.62 -9.17 24.62 -16.14V-48.21Q24.62 -49.65 24.18 -50.61Q23.74 -51.57 22.06 -52.29Q20.86 -52.81 19.16 -53.17Q17.46 -53.53 16.34 -53.69V-56.82H46.69Z" fill="#FFFFFF" transform="translate(65.60 78.29)"/></g><path d="M260.38 67.76Q258.58 67.98 257.32 68.21Q256.07 68.43 254.49 68.84Q252.65 69.33 252.14 70.59Q251.62 71.85 251.62 73.46V108.59Q251.62 113.45 249.67 117.49Q247.71 121.53 244.3 124.27Q240.84 126.97 236.57 128.34Q232.3 129.71 227.45 129.71Q219.05 129.71 213.91 125.66Q208.76 121.62 208.76 114.57Q208.76 110.39 211.12 107.65Q213.48 104.91 217.61 104.91Q221.52 104.91 223.83 107.2Q226.15 109.49 226.15 112.86Q226.15 115.74 224.15 118.18Q222.15 120.63 219.59 122.7V123.28Q219.99 124.18 221.34 124.81Q222.69 125.44 224.08 125.44Q229.47 125.44 232.55 121.58Q235.63 117.71 235.63 109.9V73.91Q235.63 72.3 235.13 71.22Q234.64 70.14 232.75 69.33Q231.4 68.75 229.5 68.34Q227.59 67.94 226.33 67.76V64.26H260.38ZM323.99 127.06 302.56 128.36 301.89 127.73V121.85H301.62Q300.09 123.24 298.63 124.56Q297.17 125.89 295.15 126.97Q292.86 128.18 290.81 128.76Q288.77 129.35 284.86 129.35Q278.08 129.35 274.46 125.26Q270.85 121.17 270.85 113.71V93.5Q270.85 91.75 270.17 90.65Q269.5 89.55 268.38 88.69Q267.48 88.02 266.04 87.73Q264.6 87.44 263.43 87.35V84.07L285.22 82.9L285.71 83.57V113.45Q285.71 118.07 287.49 120.27Q289.26 122.47 292.36 122.47Q295.55 122.47 298.09 120.81Q300.63 119.15 301.8 117.26V93.05Q301.8 91.52 301.21 90.31Q300.63 89.1 299.51 88.33Q298.7 87.79 297.19 87.62Q295.69 87.44 294.12 87.35V84.07L315.9 82.9L316.58 83.57V118.25Q316.58 119.82 317.21 120.92Q317.83 122.03 319.05 122.79Q319.9 123.33 321.27 123.53Q322.64 123.73 323.99 123.78ZM385.71 127.06 363.56 128.36 362.89 127.73V123.6L362.58 123.51Q360.38 125.89 356.62 127.66Q352.87 129.44 349.05 129.44Q339.98 129.44 334.1 122.7Q328.21 115.96 328.21 105.27Q328.21 95.79 334.79 89.01Q341.37 82.22 350.72 82.22Q354.4 82.22 357.63 83.06Q360.87 83.89 362.8 85.01V70.32Q362.8 68.66 362.13 67.2Q361.45 65.74 360.33 64.93Q358.94 63.94 356.85 63.51Q354.76 63.09 352.65 62.91V59.63L376.91 58.46L377.58 59.18V118.07Q377.58 119.78 378.14 120.95Q378.7 122.12 379.96 122.79Q380.9 123.28 382.72 123.51Q384.54 123.73 385.71 123.78ZM362.8 119.06V93.68Q362.49 92.65 361.92 91.39Q361.36 90.13 360.38 89.01Q359.48 88.06 357.97 87.35Q356.47 86.63 354.58 86.63Q350.09 86.63 347.21 91.7Q344.34 96.78 344.34 106.03Q344.34 109.67 344.85 112.57Q345.37 115.47 346.67 117.85Q347.98 120.23 350.02 121.58Q352.06 122.92 354.94 122.92Q357.68 122.92 359.48 121.87Q361.27 120.81 362.8 119.06ZM417.02 128H388.63V124.72Q389.8 124.63 390.92 124.5Q392.04 124.36 392.85 124.05Q394.29 123.51 394.88 122.5Q395.46 121.49 395.46 119.82V93.68Q395.46 92.11 394.74 90.92Q394.02 89.73 392.94 89.01Q392.13 88.47 390.5 87.97Q388.86 87.48 387.51 87.35V84.07L409.52 82.9L410.19 83.57V119.24Q410.19 120.81 410.87 121.91Q411.54 123.01 412.8 123.55Q413.7 123.96 414.78 124.27Q415.85 124.59 417.02 124.72ZM410.46 66.73Q410.46 70.14 407.83 72.54Q405.21 74.95 401.61 74.95Q397.97 74.95 395.35 72.54Q392.72 70.14 392.72 66.73Q392.72 63.31 395.35 60.89Q397.97 58.46 401.61 58.46Q405.25 58.46 407.86 60.89Q410.46 63.31 410.46 66.73ZM454.58 125.93Q451.7 127.19 448.42 128.2Q445.14 129.21 440.43 129.21Q433.42 129.21 430.03 125.8Q426.63 122.38 426.63 116.05V88.47H418.55V83.62H426.81V70.01H441.41V83.62H453.99V88.47H441.5V113.09Q441.5 118.34 442.96 120.54Q444.42 122.74 448.2 122.74Q449.41 122.74 451.57 122.56Q453.72 122.38 454.58 122.16ZM506.01 117.26Q504.44 119.82 502.22 122.09Q499.99 124.36 497.16 125.98Q494.15 127.69 491.08 128.56Q488 129.44 484 129.44Q477.35 129.44 472.52 127.55Q467.69 125.66 464.55 122.47Q461.4 119.29 459.85 114.95Q458.3 110.62 458.3 105.54Q458.3 100.96 459.99 96.76Q461.67 92.56 464.77 89.28Q467.83 86.09 472.48 84.11Q477.13 82.13 482.88 82.13Q489.17 82.13 493.21 83.66Q497.25 85.19 499.9 87.88Q502.46 90.45 503.63 93.93Q504.8 97.41 504.8 101.23V104.15H474.43Q474.43 113.36 477.98 118.16Q481.53 122.97 489.26 122.97Q493.48 122.97 496.85 120.66Q500.22 118.34 502.6 114.79ZM488.85 100.19Q488.85 97.5 488.58 94.67Q488.31 91.84 487.64 90.04Q486.88 87.93 485.55 86.85Q484.22 85.77 482.2 85.77Q478.74 85.77 476.68 89.28Q474.61 92.78 474.43 100.37Z" fill="#F4EFE9"/><path d="M583.68 67.85Q582.2 67.98 580.85 68.39Q579.51 68.79 578.07 69.65Q576.14 70.77 575.08 72.05Q574.03 73.33 572.99 75.58Q571.6 78.68 569.08 84.63Q566.57 90.58 563.33 98.17Q560.46 105 557.11 113.13Q553.77 121.26 550.71 128.72H541.68Q535.39 113.31 528.88 97.41Q522.37 81.51 519.71 75.31Q518.68 73.06 517.72 71.92Q516.75 70.77 514.64 69.56Q513.11 68.7 511.94 68.37Q510.78 68.03 508.84 67.76V64.26H543.39V67.67Q538.54 68.25 536.81 68.91Q535.08 69.56 535.08 70.54Q535.08 71.04 535.24 71.6Q535.39 72.16 535.71 73.11Q537.14 77.06 540.92 86.02Q544.69 94.98 552.1 113.36Q556.64 102.17 559.65 94.44Q562.66 86.72 564.95 80.79Q566.07 77.91 566.82 75.42Q567.56 72.93 567.56 71.67Q567.56 70.23 565.49 69.26Q563.42 68.3 557.85 67.85V64.26H583.68ZM632.74 117.26Q631.17 119.82 628.94 122.09Q626.72 124.36 623.89 125.98Q620.88 127.69 617.8 128.56Q614.72 129.44 610.73 129.44Q604.08 129.44 599.25 127.55Q594.42 125.66 591.28 122.47Q588.13 119.29 586.58 114.95Q585.03 110.62 585.03 105.54Q585.03 100.96 586.72 96.76Q588.4 92.56 591.5 89.28Q594.55 86.09 599.2 84.11Q603.85 82.13 609.6 82.13Q615.89 82.13 619.94 83.66Q623.98 85.19 626.63 87.88Q629.19 90.45 630.36 93.93Q631.53 97.41 631.53 101.23V104.15H601.16Q601.16 113.36 604.71 118.16Q608.26 122.97 615.98 122.97Q620.21 122.97 623.57 120.66Q626.94 118.34 629.32 114.79ZM615.58 100.19Q615.58 97.5 615.31 94.67Q615.04 91.84 614.37 90.04Q613.6 87.93 612.28 86.85Q610.95 85.77 608.93 85.77Q605.47 85.77 603.4 89.28Q601.34 92.78 601.16 100.37ZM696.35 128H669.3V124.72Q670.16 124.63 671.37 124.5Q672.58 124.36 673.21 124.05Q674.16 123.55 674.56 122.61Q674.96 121.67 674.96 119.82V98.8Q674.96 94.22 673.28 91.91Q671.6 89.59 668.32 89.59Q666.52 89.59 664.97 90.13Q663.42 90.67 661.94 91.7Q660.63 92.6 659.85 93.54Q659.06 94.49 658.52 95.21V119.33Q658.52 120.9 658.97 121.96Q659.42 123.01 660.46 123.55Q661.17 123.96 662.25 124.27Q663.33 124.59 664.36 124.72V128H637.05V124.72Q638.17 124.63 639.32 124.47Q640.46 124.32 641.27 124.05Q642.71 123.55 643.25 122.52Q643.79 121.49 643.79 119.82V93.68Q643.79 92.29 643.07 90.94Q642.35 89.59 641.18 88.74Q640.38 88.2 639.14 87.84Q637.9 87.48 636.42 87.35V84.07L657.85 82.9L658.52 83.57V90.09H658.7Q659.96 88.96 661.76 87.39Q663.55 85.82 665.08 84.83Q666.74 83.75 669.44 82.99Q672.13 82.22 675.19 82.22Q682.51 82.22 686.17 86.38Q689.83 90.54 689.83 97.41V119.42Q689.83 121.08 690.33 122.07Q690.82 123.06 692.17 123.64Q692.89 123.96 693.94 124.27Q695 124.59 696.35 124.72ZM758.61 127.06 736.46 128.36 735.79 127.73V123.6L735.47 123.51Q733.27 125.89 729.52 127.66Q725.77 129.44 721.95 129.44Q712.88 129.44 706.99 122.7Q701.11 115.96 701.11 105.27Q701.11 95.79 707.69 89.01Q714.27 82.22 723.62 82.22Q727.3 82.22 730.53 83.06Q733.77 83.89 735.7 85.01V70.32Q735.7 68.66 735.03 67.2Q734.35 65.74 733.23 64.93Q731.84 63.94 729.75 63.51Q727.66 63.09 725.55 62.91V59.63L749.8 58.46L750.48 59.18V118.07Q750.48 119.78 751.04 120.95Q751.6 122.12 752.86 122.79Q753.8 123.28 755.62 123.51Q757.44 123.73 758.61 123.78ZM735.7 119.06V93.68Q735.38 92.65 734.82 91.39Q734.26 90.13 733.27 89.01Q732.38 88.06 730.87 87.35Q729.37 86.63 727.48 86.63Q722.99 86.63 720.11 91.7Q717.24 96.78 717.24 106.03Q717.24 109.67 717.75 112.57Q718.27 115.47 719.57 117.85Q720.88 120.23 722.92 121.58Q724.96 122.92 727.84 122.92Q730.58 122.92 732.38 121.87Q734.17 120.81 735.7 119.06ZM812.88 127.06Q810.9 127.91 808.2 128.63Q805.51 129.35 802.5 129.35Q796.97 129.35 794.37 127.71Q791.76 126.07 790.82 123.01H790.55Q789.02 124.54 787.61 125.62Q786.19 126.7 784.57 127.46Q782.46 128.45 780.51 128.92Q778.55 129.39 775.05 129.39Q769.84 129.39 766.16 126.32Q762.47 123.24 762.47 118.16Q762.47 115.24 763.28 113.2Q764.09 111.15 765.57 109.58Q766.92 108.14 768.69 107.2Q770.47 106.26 772.58 105.45Q776.62 103.97 782.28 102.37Q787.94 100.78 790.55 99.52V95.21Q790.55 94.08 790.37 92.24Q790.19 90.4 789.61 89.14Q788.98 87.71 787.63 86.72Q786.28 85.73 784.08 85.73Q782.1 85.73 780.78 86.29Q779.45 86.85 778.64 87.44Q778.78 88.33 779.41 90.18Q780.04 92.02 780.04 93.72Q780.04 94.49 779.63 95.63Q779.23 96.78 778.46 97.45Q777.43 98.35 776.15 98.85Q774.87 99.34 772.22 99.34Q768.45 99.34 766.52 97.52Q764.58 95.7 764.58 92.78Q764.58 90.27 766.58 88.27Q768.58 86.27 771.46 84.96Q774.29 83.62 777.97 82.88Q781.65 82.13 784.8 82.13Q789.16 82.13 792.79 82.65Q796.43 83.17 799.35 84.79Q802.14 86.36 803.78 89.34Q805.42 92.33 805.42 97.14Q805.42 102.21 805.22 109.18Q805.01 116.14 805.01 118.34Q805.01 120.36 805.62 121.53Q806.23 122.7 807.48 123.28Q808.25 123.64 809.89 123.71Q811.53 123.78 812.88 123.78ZM790.55 103.65Q788.03 104.51 785.56 105.61Q783.09 106.71 781.52 107.92Q779.86 109.18 778.91 111.13Q777.97 113.09 777.97 115.74Q777.97 119.24 779.57 120.81Q781.16 122.38 783.5 122.38Q785.97 122.38 787.56 121.37Q789.16 120.36 790.37 118.88ZM837.13 129.53Q832.78 129.53 828.62 128.25Q824.46 126.97 822.17 125.53L820.83 128.58H817.32L816.74 111.83H820.02Q820.69 113.85 822.26 116.39Q823.84 118.93 825.86 120.95Q827.97 122.97 830.69 124.36Q833.4 125.75 836.5 125.75Q840.59 125.75 842.59 124.16Q844.59 122.56 844.59 119.24Q844.59 117.44 843.69 116.28Q842.79 115.11 841.22 114.25Q839.47 113.36 837.38 112.73Q835.29 112.1 832.24 111.2Q829.18 110.3 827 109.38Q824.82 108.46 822.49 106.48Q820.47 104.73 819.25 102.26Q818.04 99.79 818.04 96.38Q818.04 90.04 823.36 86.13Q828.69 82.22 837.31 82.22Q841.4 82.22 844.84 83.06Q848.27 83.89 850.61 84.88L851.55 82.22H854.97L855.69 97.54H852.5Q850.92 92.87 847.11 89.48Q843.29 86.09 838.88 86.09Q835.43 86.09 833.45 87.53Q831.47 88.96 831.47 91.52Q831.47 94.94 834.37 96.46Q837.27 97.99 842.48 99.34Q850.52 101.41 854.25 104.98Q857.98 108.55 857.98 114.07Q857.98 121.44 852.2 125.48Q846.43 129.53 837.13 129.53Z" fill="#E2552D"/></svg>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="menu">
+      <li><a href="#inicio" class="is-active">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#como-funciona">Como funciona</a></li>
+      <li><a href="#duvidas">Dúvidas</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li class="nav-mobile-cta"><a class="btn btn-pill" href="#contato">Diagnóstico gratuito</a></li>
+    </ul>
+    <a class="btn btn-pill nav-cta" href="#contato">Diagnóstico gratuito</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO / CARROSSEL -->
+<section class="hero" id="inicio">
+  <div class="container hero-inner">
+    <div class="carousel" role="region" aria-roledescription="carrossel" aria-label="Destaques">
+      <div class="slides">
+
+        <div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 de 3">
+          <div class="slide-text">
+            <span class="subheading">Tráfego pago para negócio local</span>
+            <h1>Anúncio bom é o que <span class="enfase">vira cliente</span></h1>
+            <p class="lead">Cuidamos dos seus anúncios no Instagram, no Facebook e no Google e mostramos, toda semana, quantas conversas e vendas eles trouxeram.</p>
+            <div class="hero-actions">
+              <a class="btn btn-lg" href="#contato">Quero um diagnóstico gratuito</a>
+              <a class="btn btn-lg btn-ghost" href="#como-funciona">Ver como funciona</a>
+            </div>
+          </div>
+          <div class="slide-visual">
+            <div class="viz">
+              <div class="viz-head"><span class="viz-title">Relatório da semana</span><span class="tag">Exemplo</span></div>
+              <div class="viz-sub">02 a 08/11 · Campanha de conversas no WhatsApp</div>
+              <div class="kpis">
+                <div class="kpi"><span class="k">Investido</span><span class="v">R$ 350,00</span></div>
+                <div class="kpi"><span class="k">Conversas</span><span class="v">41</span></div>
+                <div class="kpi hl"><span class="k">Custo por conversa</span><span class="v">R$ 8,54</span></div>
+                <div class="kpi"><span class="k">Vendas informadas</span><span class="v">9</span></div>
+              </div>
+              <div class="chart-label">Conversas por dia</div>
+              <div class="bars" role="img" aria-label="Conversas por dia: segunda 4, terça 5, quarta 7, quinta 6, sexta 8, sábado 5, domingo 6">
+                <span class="bar" style="height:35px"><b>4</b><i>seg</i></span>
+                <span class="bar" style="height:44px"><b>5</b><i>ter</i></span>
+                <span class="bar" style="height:61px"><b>7</b><i>qua</i></span>
+                <span class="bar" style="height:53px"><b>6</b><i>qui</i></span>
+                <span class="bar" style="height:70px"><b>8</b><i>sex</i></span>
+                <span class="bar" style="height:44px"><b>5</b><i>sáb</i></span>
+                <span class="bar" style="height:53px"><b>6</b><i>dom</i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="2 de 3" aria-hidden="true">
+          <div class="slide-text">
+            <span class="subheading">Site e página de vendas</span>
+            <h1>Seu negócio com um <span class="enfase">site de verdade</span> em 7 dias</h1>
+            <p class="lead">Página rápida, feita para o celular, com botão de WhatsApp e tudo pronto para saber de onde veio cada contato.</p>
+            <div class="hero-actions">
+              <a class="btn btn-lg" href="#contato">Quero meu site</a>
+              <a class="btn btn-lg btn-ghost" href="#servicos">Ver serviços</a>
+            </div>
+          </div>
+          <div class="slide-visual">
+            <div class="phone-wrap">
+              <span class="tag phone-tag">Exemplo</span>
+              <span class="chip-float chip-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>Feito para celular</span>
+              <span class="chip-float chip-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8"/></svg>Cada clique medido</span>
+              <div class="phone" aria-label="Exemplo de site de uma confeitaria no celular" role="img">
+                <div class="screen">
+                  <div class="ph-bar"><span>Confeitaria do Bairro</span><span>Menu</span></div>
+                  <div class="ph-hero"><strong>Bolos e doces por encomenda</strong><small>Entrega no bairro e retirada na loja</small></div>
+                  <div class="ph-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.1-4.4A8.5 8.5 0 1 1 20.5 12z"/></svg>Pedir pelo WhatsApp</div>
+                  <ul class="ph-list">
+                    <li><span>Bolo de pote</span><span>R$ 12</span></li>
+                    <li><span>Bolo de aniversário 1 kg</span><span>R$ 89</span></li>
+                    <li><span>Docinhos, cento</span><span>R$ 95</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" role="group" aria-roledescription="slide" aria-label="3 de 3" aria-hidden="true">
+          <div class="slide-text">
+            <span class="subheading">Transparência</span>
+            <h1>Você sabe para onde vai <span class="enfase">cada real</span></h1>
+            <p class="lead">O dinheiro do anúncio sai do seu cartão direto para o Meta ou o Google. A JuditeVendas cobra só pela gestão, sem fidelidade.</p>
+            <div class="hero-actions">
+              <a class="btn btn-lg" href="#contato">Falar com a gente</a>
+              <a class="btn btn-lg btn-ghost" href="#como-medimos">Ver o relatório</a>
+            </div>
+          </div>
+          <div class="slide-visual">
+            <div class="viz">
+              <div class="viz-head"><span class="viz-title">Custo por conversa</span><span class="tag">Exemplo</span></div>
+              <div class="viz-sub">Primeiro mês de campanha, semana a semana</div>
+              <div class="chart-label" style="margin-top:26px">R$ por conversa no WhatsApp</div>
+              <div class="bars bars-wide" role="img" aria-label="Custo por conversa: semana 1 R$ 14,20, semana 2 R$ 11,60, semana 3 R$ 9,80, semana 4 R$ 8,54">
+                <span class="bar" style="height:100px"><b>14,20</b><i>sem. 1</i></span>
+                <span class="bar" style="height:82px"><b>11,60</b><i>sem. 2</i></span>
+                <span class="bar" style="height:69px"><b>9,80</b><i>sem. 3</i></span>
+                <span class="bar" style="height:60px"><b>8,54</b><i>sem. 4</i></span>
+              </div>
+              <p class="viz-foot">Toda semana a gente corta o que não traz conversa e reforça o que traz.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="car-controls">
+        <button class="car-arrow" type="button" data-car="prev" aria-label="Destaque anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></button>
+        <div class="dots">
+          <button class="dot" type="button" aria-label="Destaque 1" aria-current="true"></button>
+          <button class="dot" type="button" aria-label="Destaque 2" aria-current="false"></button>
+          <button class="dot" type="button" aria-label="Destaque 3" aria-current="false"></button>
+        </div>
+        <button class="car-arrow" type="button" data-car="next" aria-label="Próximo destaque"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATALHO: DIAGNÓSTICO -->
+<div class="atalho">
+  <div class="container">
+    <div class="atalho-card">
+      <div>
+        <h3>Peça seu diagnóstico gratuito</h3>
+        <p>A gente olha seu Instagram, seu Google e seus anúncios e responde em até 48 horas.</p>
+      </div>
+      <form class="atalho-form" id="atalho-form" novalidate>
+        <div class="field"><label class="sr-only" for="at-nome">Seu nome</label><input class="input" id="at-nome" name="nome" type="text" placeholder="Seu nome" autocomplete="name" required></div>
+        <div class="field"><label class="sr-only" for="at-whats">WhatsApp</label><input class="input" id="at-whats" name="whats" type="tel" inputmode="tel" placeholder="WhatsApp com DDD" autocomplete="tel" required></div>
+        <div class="field"><label class="sr-only" for="at-tipo">Tipo de negócio</label>
+          <select class="input" id="at-tipo" name="tipo">
+            <option value="">Tipo de negócio</option>
+            <option>Clínica ou consultório</option>
+            <option>Restaurante ou delivery</option>
+            <option>Loja</option>
+            <option>Academia ou estúdio</option>
+            <option>Salão ou estética</option>
+            <option>Prestador de serviço</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <button class="btn" type="submit">Continuar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- SOBRE -->
+<section class="section" id="sobre">
+  <div class="container about">
+    <div class="duo">
+      <div class="role">
+        <div class="role-top">
+          <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5v3a1 1 0 0 0 1 1h2.5L12 19V5L6.5 9.5H4a1 1 0 0 0-1 1z"/><path d="M15.5 9a4 4 0 0 1 0 6"/><path d="M18.5 6a8 8 0 0 1 0 12"/></svg></span>
+          <div><small>Anúncios</small><h3>Meta Ads e Google Ads</h3></div>
+        </div>
+        <div class="chips"><span>Público</span><span>Criativos</span><span>Orçamento</span><span>Otimização</span></div>
+      </div>
+      <span class="plus" aria-hidden="true">+</span>
+      <div class="role">
+        <div class="role-top">
+          <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.5 5-3 14"/></svg></span>
+          <div><small>Tecnologia</small><h3>Site, rastreamento e automação</h3></div>
+        </div>
+        <div class="chips"><span>Landing page</span><span>Pixel e API de Conversões</span><span>UTMs</span><span>WhatsApp rastreado</span></div>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="subheading">Sobre nós</span>
+      <h2 class="h2">Uma dupla para cuidar do anúncio e da tecnologia</h2>
+      <p>A JuditeVendas é formada por dois amigos. Um trabalha com desenvolvimento de sistemas e cuida do site, do rastreamento e das automações. O outro cuida dos anúncios: público, criativo, orçamento e otimização.</p>
+      <p>Você fala direto com quem faz o trabalho e recebe números que dá para entender.</p>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Atendimento direto pelo WhatsApp</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Contas de anúncio, pixel e site no seu nome</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Relatório toda semana, em linguagem simples</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA DE NÚMEROS -->
+<section class="band" aria-label="Nossos compromissos">
+  <div class="container band-grid">
+    <div class="stat"><strong>48h</strong><span>para entregar o diagnóstico gratuito</span></div>
+    <div class="stat"><strong>7 dias</strong><span>para o seu site ficar no ar</span></div>
+    <div class="stat"><strong>1 relatório</strong><span>por semana, no seu WhatsApp</span></div>
+    <div class="stat"><strong>0</strong><span>fidelidade: você fica se estiver dando resultado</span></div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="section" id="servicos">
+  <div class="container">
+    <div class="heading">
+      <span class="subheading">O que fazemos</span>
+      <h2>Tudo que fica entre o anúncio e o cliente</h2>
+      <p>Você escolhe o pacote completo ou só a parte que está faltando.</p>
+    </div>
+    <div class="services">
+      <article class="service">
+        <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5v3a1 1 0 0 0 1 1h2.5L12 19V5L6.5 9.5H4a1 1 0 0 0-1 1z"/><path d="M15.5 9a4 4 0 0 1 0 6"/><path d="M18.5 6a8 8 0 0 1 0 12"/></svg></span>
+        <h3>Anúncios no Instagram e no Facebook</h3>
+        <p>Campanhas para gerar conversas no WhatsApp, visitas à loja ou vendas no site, com público da sua região.</p>
+      </article>
+      <article class="service">
+        <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.6-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.3"/></svg></span>
+        <h3>Google Ads e Perfil da Empresa</h3>
+        <p>Apareça quando alguém procurar o que você vende perto de você, na busca do Google e no Maps.</p>
+      </article>
+      <article class="service">
+        <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M6.5 6.5h.01M9 6.5h.01"/></svg></span>
+        <h3>Site e página de vendas</h3>
+        <p>Página rápida e feita para o celular, com o jeito do seu negócio, seus produtos e um botão de contato bem claro.</p>
+      </article>
+      <article class="service">
+        <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8"/></svg></span>
+        <h3>Rastreamento de ponta a ponta</h3>
+        <p>Pixel, API de Conversões e UTMs configurados. Dá para saber qual anúncio trouxe cada contato.</p>
+      </article>
+      <article class="service">
+        <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.1-4.4A8.5 8.5 0 1 1 20.5 12z"/><path d="M8.5 11h7M8.5 14h4.5"/></svg></span>
+        <h3>WhatsApp que conta resultado</h3>
+        <p>Link rastreado, mensagem de boas-vindas pronta e contagem de conversas por campanha.</p>
+      </article>
+      <article class="service">
+        <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16"/><path d="M8 16v-3M12 16V9M16 16V6"/></svg></span>
+        <h3>Relatório semanal</h3>
+        <p>Quanto foi investido, quantas conversas chegaram e quanto custou cada uma, explicado sem termo técnico.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- COMO MEDIMOS -->
+<section class="section bg-alt" id="como-medimos">
+  <div class="container">
+    <div class="heading">
+      <span class="subheading">Como medimos</span>
+      <h2>Cada real acompanhado, do anúncio até a venda</h2>
+      <p>O rastreamento é configurado antes do primeiro anúncio entrar no ar. Assim o relatório mostra o caminho inteiro do cliente.</p>
+    </div>
+    <div class="measure">
+      <ol class="flow">
+        <li>
+          <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg></span>
+          <div><h3>Anúncio</h3><p>Quantas pessoas viram e quantas clicaram.</p><div class="chips"><span>Impressões</span><span>CPM</span><span>CTR</span></div></div>
+        </li>
+        <li>
+          <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></span>
+          <div><h3>Página ou WhatsApp</h3><p>Quantas pessoas chegaram e quantas chamaram.</p><div class="chips"><span>Cliques no link</span><span>Taxa de conversão</span></div></div>
+        </li>
+        <li>
+          <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.1-4.4A8.5 8.5 0 1 1 20.5 12z"/></svg></span>
+          <div><h3>Conversa</h3><p>Quanto custou cada contato que chegou.</p><div class="chips"><span>Custo por conversa</span></div></div>
+        </li>
+        <li>
+          <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></span>
+          <div><h3>Venda</h3><p>Quanto voltou para você no fim da semana.</p><div class="chips"><span>Custo por venda</span><span>Retorno sobre o investimento</span></div></div>
+        </li>
+      </ol>
+      <div class="report">
+        <div class="report-head">
+          <div><h3>Relatório semanal</h3><p>Campanha de conversas no WhatsApp · 02 a 08/11</p></div>
+          <span class="tag">Exemplo</span>
+        </div>
+        <div class="table-wrap">
+          <table class="rtable">
+            <tbody>
+              <tr><th scope="row">Investimento</th><td>R$ 350,00</td></tr>
+              <tr><th scope="row">Impressões</th><td>31.200</td></tr>
+              <tr><th scope="row">CPM (custo por mil impressões)</th><td>R$ 11,22</td></tr>
+              <tr><th scope="row">Cliques no link</th><td>612</td></tr>
+              <tr><th scope="row">CTR (taxa de cliques)</th><td>1,96%</td></tr>
+              <tr><th scope="row">Conversas no WhatsApp</th><td>41</td></tr>
+              <tr><th scope="row">Custo por conversa</th><td>R$ 8,54</td></tr>
+              <tr><th scope="row">Vendas informadas</th><td>9</td></tr>
+              <tr class="hl"><th scope="row">Custo por venda</th><td>R$ 38,89</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Vendas informadas são as que você confirma para a gente no fim da semana. Com elas, dá para saber se o anúncio está se pagando.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section" id="como-funciona">
+  <div class="container">
+    <div class="heading">
+      <span class="subheading">Como funciona</span>
+      <h2>Do primeiro contato ao anúncio no ar</h2>
+    </div>
+    <ol class="steps">
+      <li class="step"><span class="step-n">1</span><h3>Diagnóstico gratuito</h3><p>Olhamos seu Instagram, seu Google e seus anúncios, se já tiver, e mostramos o que dá para melhorar. Leva até 48 horas.</p></li>
+      <li class="step"><span class="step-n">2</span><h3>Estrutura pronta</h3><p>Montamos ou ajustamos o site, o pixel, o link de WhatsApp e as contas de anúncio, tudo no seu nome.</p></li>
+      <li class="step"><span class="step-n">3</span><h3>Anúncios no ar</h3><p>Começamos com um orçamento que cabe no seu bolso e testamos públicos e criativos diferentes.</p></li>
+      <li class="step"><span class="step-n">4</span><h3>Ajuste toda semana</h3><p>Você recebe o relatório. A gente corta o que não funciona e coloca mais verba no que traz cliente.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section class="section bg-fade" id="para-quem">
+  <div class="container">
+    <div class="heading">
+      <span class="subheading">Para quem é</span>
+      <h2>Feito para negócio local que quer mais cliente</h2>
+      <p>Se o seu cliente mora perto e chega pelo Instagram, pelo Google ou pelo WhatsApp, a gente consegue ajudar.</p>
+    </div>
+    <div class="segments">
+      <article class="segment"><h3>Clínicas e consultórios</h3><p>Agenda mais cheia com anúncio para quem mora perto e com presença forte na busca do Google.</p></article>
+      <article class="segment"><h3>Restaurantes e delivery</h3><p>Pedidos direto no WhatsApp, sem depender só dos aplicativos de entrega.</p></article>
+      <article class="segment"><h3>Lojas de bairro</h3><p>Mais gente passando na porta com anúncio por região e Perfil da Empresa no Google bem cuidado.</p></article>
+      <article class="segment"><h3>Academias e estúdios</h3><p>Aulas experimentais agendadas pelo WhatsApp, com campanhas para cada época do ano.</p></article>
+      <article class="segment"><h3>Salões e estética</h3><p>Horários vagos da semana preenchidos com campanhas rápidas e bem segmentadas.</p></article>
+      <article class="segment"><h3>Prestadores de serviço</h3><p>Pedidos de orçamento pelo Google na hora em que o cliente precisa do serviço.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- DÚVIDAS -->
+<section class="section" id="duvidas">
+  <div class="container">
+    <div class="heading">
+      <span class="subheading">Dúvidas</span>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Quem paga os anúncios?</summary>
+        <p>Você, direto para o Meta ou para o Google, no seu cartão. O dinheiro do anúncio não passa pela JuditeVendas. A gente cobra uma mensalidade pela gestão.</p>
+      </details>
+      <details>
+        <summary>Quanto preciso investir em anúncio?</summary>
+        <p>Dá para começar com pouco. No diagnóstico a gente sugere um valor por dia que faça sentido para o seu tipo de negócio e para a sua região.</p>
+      </details>
+      <details>
+        <summary>Preciso ter site?</summary>
+        <p>Não. Dá para anunciar direto para o WhatsApp. Uma página própria passa mais confiança e melhora a medição, e a gente entrega em até 7 dias.</p>
+      </details>
+      <details>
+        <summary>Tem fidelidade?</summary>
+        <p>Não. Você pode cancelar quando quiser. As contas de anúncio, o pixel e o site ficam no seu nome, então nada se perde se você sair.</p>
+      </details>
+      <details>
+        <summary>Em quanto tempo vejo resultado?</summary>
+        <p>As primeiras conversas costumam chegar nos primeiros dias de anúncio. As duas a quatro primeiras semanas são de teste e ajuste, e você acompanha tudo pelo relatório.</p>
+      </details>
+      <details>
+        <summary>Vocês garantem vendas?</summary>
+        <p>Não. Ninguém sério garante. O que a gente garante é transparência: você vê quanto investiu, quantos contatos chegaram e quanto custou cada um.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="section bg-modern" id="contato">
+  <div class="container contact">
+    <div class="contact-text">
+      <span class="subheading">Contato</span>
+      <h2 class="h2">Agende um diagnóstico gratuito</h2>
+      <p>Conte um pouco sobre o seu negócio. A gente analisa seu Instagram, seu Google e seus anúncios e responde em até 48 horas com o que dá para melhorar.</p>
+      <ul class="contacts">
+        <li><span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.1-4.4A8.5 8.5 0 1 1 20.5 12z"/></svg></span><div><small>WhatsApp</small><strong data-contato="whatsapp">a definir</strong></div></li>
+        <li><span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></span><div><small>E-mail</small><strong data-contato="email">a definir</strong></div></li>
+        <li><span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></svg></span><div><small>Instagram</small><strong data-contato="instagram">a definir</strong></div></li>
+      </ul>
+    </div>
+    <form class="form-card" id="contato-form" novalidate>
+      <h3>Preencha seus dados</h3>
+      <div class="form-grid">
+        <div class="field"><label for="ct-nome">Seu nome</label><input class="input" id="ct-nome" name="nome" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="ct-whats">WhatsApp com DDD</label><input class="input" id="ct-whats" name="whats" type="tel" inputmode="tel" autocomplete="tel" placeholder="(27) 99999-0000" required></div>
+        <div class="field"><label for="ct-negocio">Nome do negócio</label><input class="input" id="ct-negocio" name="negocio" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="ct-tipo">Tipo de negócio</label>
+          <select class="input" id="ct-tipo" name="tipo">
+            <option value="">Selecione</option>
+            <option>Clínica ou consultório</option>
+            <option>Restaurante ou delivery</option>
+            <option>Loja</option>
+            <option>Academia ou estúdio</option>
+            <option>Salão ou estética</option>
+            <option>Prestador de serviço</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="field full"><label for="ct-msg">O que você quer melhorar?</label><textarea class="input" id="ct-msg" name="msg" placeholder="Ex.: quero mais pedidos no WhatsApp durante a semana"></textarea></div>
+      </div>
+      <button class="btn btn-lg" type="submit">Preparar mensagem</button>
+      <p class="hint">A mensagem é montada aqui na página para você enviar pelo WhatsApp. Nada é enviado sem você confirmar.</p>
+      <div class="result" id="ct-result" hidden>
+        <strong>Sua mensagem está pronta</strong>
+        <pre id="ct-preview"></pre>
+        <div class="result-actions">
+          <a class="btn btn-wa" id="ct-wa" href="#" target="_blank" rel="noopener" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.1-4.4A8.5 8.5 0 1 1 20.5 12z"/></svg>Abrir no WhatsApp</a>
+          <button class="btn btn-line" id="ct-copy" type="button">Copiar mensagem</button>
+        </div>
+        <p class="hint" id="ct-note"></p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- RODAPÉ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="#inicio" aria-label="JuditeVendas, voltar ao início">
+<svg xmlns="http://www.w3.org/2000/svg" class="logo" aria-hidden="true" focusable="false" viewBox="0 0 890 190"><g transform="translate(109.0 98) rotate(-12) scale(1.0) translate(-65.0 -50.0)"><path d="M31 50C14 40 2 22 -16 18" fill="none" stroke="#F4EFE9" stroke-width="4.5" stroke-linecap="round"/><path d="M40 0H116Q130 0 130 14V86Q130 100 116 100H40Q34 100 30 95L3 58Q-2 50 3 42L30 5Q34 0 40 0ZM31 50m-10 0a10 10 0 1 0 20 0a10 10 0 1 0 -20 0Z" fill="#E2552D" fill-rule="evenodd"/><path d="M46.69 -53.69Q45.08 -53.49 43.96 -53.29Q42.84 -53.09 41.44 -52.73Q39.8 -52.29 39.34 -51.17Q38.88 -50.05 38.88 -48.61V-17.3Q38.88 -12.97 37.14 -9.37Q35.39 -5.77 32.35 -3.32Q29.27 -0.92 25.46 0.3Q21.66 1.52 17.34 1.52Q9.85 1.52 5.27 -2.08Q0.68 -5.69 0.68 -11.97Q0.68 -15.7 2.78 -18.14Q4.88 -20.58 8.57 -20.58Q12.05 -20.58 14.11 -18.54Q16.18 -16.5 16.18 -13.49Q16.18 -10.93 14.39 -8.75Q12.61 -6.57 10.33 -4.72V-4.2Q10.69 -3.4 11.89 -2.84Q13.09 -2.28 14.33 -2.28Q19.14 -2.28 21.88 -5.73Q24.62 -9.17 24.62 -16.14V-48.21Q24.62 -49.65 24.18 -50.61Q23.74 -51.57 22.06 -52.29Q20.86 -52.81 19.16 -53.17Q17.46 -53.53 16.34 -53.69V-56.82H46.69Z" fill="#FFFFFF" transform="translate(65.60 78.29)"/></g><path d="M260.38 67.76Q258.58 67.98 257.32 68.21Q256.07 68.43 254.49 68.84Q252.65 69.33 252.14 70.59Q251.62 71.85 251.62 73.46V108.59Q251.62 113.45 249.67 117.49Q247.71 121.53 244.3 124.27Q240.84 126.97 236.57 128.34Q232.3 129.71 227.45 129.71Q219.05 129.71 213.91 125.66Q208.76 121.62 208.76 114.57Q208.76 110.39 211.12 107.65Q213.48 104.91 217.61 104.91Q221.52 104.91 223.83 107.2Q226.15 109.49 226.15 112.86Q226.15 115.74 224.15 118.18Q222.15 120.63 219.59 122.7V123.28Q219.99 124.18 221.34 124.81Q222.69 125.44 224.08 125.44Q229.47 125.44 232.55 121.58Q235.63 117.71 235.63 109.9V73.91Q235.63 72.3 235.13 71.22Q234.64 70.14 232.75 69.33Q231.4 68.75 229.5 68.34Q227.59 67.94 226.33 67.76V64.26H260.38ZM323.99 127.06 302.56 128.36 301.89 127.73V121.85H301.62Q300.09 123.24 298.63 124.56Q297.17 125.89 295.15 126.97Q292.86 128.18 290.81 128.76Q288.77 129.35 284.86 129.35Q278.08 129.35 274.46 125.26Q270.85 121.17 270.85 113.71V93.5Q270.85 91.75 270.17 90.65Q269.5 89.55 268.38 88.69Q267.48 88.02 266.04 87.73Q264.6 87.44 263.43 87.35V84.07L285.22 82.9L285.71 83.57V113.45Q285.71 118.07 287.49 120.27Q289.26 122.47 292.36 122.47Q295.55 122.47 298.09 120.81Q300.63 119.15 301.8 117.26V93.05Q301.8 91.52 301.21 90.31Q300.63 89.1 299.51 88.33Q298.7 87.79 297.19 87.62Q295.69 87.44 294.12 87.35V84.07L315.9 82.9L316.58 83.57V118.25Q316.58 119.82 317.21 120.92Q317.83 122.03 319.05 122.79Q319.9 123.33 321.27 123.53Q322.64 123.73 323.99 123.78ZM385.71 127.06 363.56 128.36 362.89 127.73V123.6L362.58 123.51Q360.38 125.89 356.62 127.66Q352.87 129.44 349.05 129.44Q339.98 129.44 334.1 122.7Q328.21 115.96 328.21 105.27Q328.21 95.79 334.79 89.01Q341.37 82.22 350.72 82.22Q354.4 82.22 357.63 83.06Q360.87 83.89 362.8 85.01V70.32Q362.8 68.66 362.13 67.2Q361.45 65.74 360.33 64.93Q358.94 63.94 356.85 63.51Q354.76 63.09 352.65 62.91V59.63L376.91 58.46L377.58 59.18V118.07Q377.58 119.78 378.14 120.95Q378.7 122.12 379.96 122.79Q380.9 123.28 382.72 123.51Q384.54 123.73 385.71 123.78ZM362.8 119.06V93.68Q362.49 92.65 361.92 91.39Q361.36 90.13 360.38 89.01Q359.48 88.06 357.97 87.35Q356.47 86.63 354.58 86.63Q350.09 86.63 347.21 91.7Q344.34 96.78 344.34 106.03Q344.34 109.67 344.85 112.57Q345.37 115.47 346.67 117.85Q347.98 120.23 350.02 121.58Q352.06 122.92 354.94 122.92Q357.68 122.92 359.48 121.87Q361.27 120.81 362.8 119.06ZM417.02 128H388.63V124.72Q389.8 124.63 390.92 124.5Q392.04 124.36 392.85 124.05Q394.29 123.51 394.88 122.5Q395.46 121.49 395.46 119.82V93.68Q395.46 92.11 394.74 90.92Q394.02 89.73 392.94 89.01Q392.13 88.47 390.5 87.97Q388.86 87.48 387.51 87.35V84.07L409.52 82.9L410.19 83.57V119.24Q410.19 120.81 410.87 121.91Q411.54 123.01 412.8 123.55Q413.7 123.96 414.78 124.27Q415.85 124.59 417.02 124.72ZM410.46 66.73Q410.46 70.14 407.83 72.54Q405.21 74.95 401.61 74.95Q397.97 74.95 395.35 72.54Q392.72 70.14 392.72 66.73Q392.72 63.31 395.35 60.89Q397.97 58.46 401.61 58.46Q405.25 58.46 407.86 60.89Q410.46 63.31 410.46 66.73ZM454.58 125.93Q451.7 127.19 448.42 128.2Q445.14 129.21 440.43 129.21Q433.42 129.21 430.03 125.8Q426.63 122.38 426.63 116.05V88.47H418.55V83.62H426.81V70.01H441.41V83.62H453.99V88.47H441.5V113.09Q441.5 118.34 442.96 120.54Q444.42 122.74 448.2 122.74Q449.41 122.74 451.57 122.56Q453.72 122.38 454.58 122.16ZM506.01 117.26Q504.44 119.82 502.22 122.09Q499.99 124.36 497.16 125.98Q494.15 127.69 491.08 128.56Q488 129.44 484 129.44Q477.35 129.44 472.52 127.55Q467.69 125.66 464.55 122.47Q461.4 119.29 459.85 114.95Q458.3 110.62 458.3 105.54Q458.3 100.96 459.99 96.76Q461.67 92.56 464.77 89.28Q467.83 86.09 472.48 84.11Q477.13 82.13 482.88 82.13Q489.17 82.13 493.21 83.66Q497.25 85.19 499.9 87.88Q502.46 90.45 503.63 93.93Q504.8 97.41 504.8 101.23V104.15H474.43Q474.43 113.36 477.98 118.16Q481.53 122.97 489.26 122.97Q493.48 122.97 496.85 120.66Q500.22 118.34 502.6 114.79ZM488.85 100.19Q488.85 97.5 488.58 94.67Q488.31 91.84 487.64 90.04Q486.88 87.93 485.55 86.85Q484.22 85.77 482.2 85.77Q478.74 85.77 476.68 89.28Q474.61 92.78 474.43 100.37Z" fill="#F4EFE9"/><path d="M583.68 67.85Q582.2 67.98 580.85 68.39Q579.51 68.79 578.07 69.65Q576.14 70.77 575.08 72.05Q574.03 73.33 572.99 75.58Q571.6 78.68 569.08 84.63Q566.57 90.58 563.33 98.17Q560.46 105 557.11 113.13Q553.77 121.26 550.71 128.72H541.68Q535.39 113.31 528.88 97.41Q522.37 81.51 519.71 75.31Q518.68 73.06 517.72 71.92Q516.75 70.77 514.64 69.56Q513.11 68.7 511.94 68.37Q510.78 68.03 508.84 67.76V64.26H543.39V67.67Q538.54 68.25 536.81 68.91Q535.08 69.56 535.08 70.54Q535.08 71.04 535.24 71.6Q535.39 72.16 535.71 73.11Q537.14 77.06 540.92 86.02Q544.69 94.98 552.1 113.36Q556.64 102.17 559.65 94.44Q562.66 86.72 564.95 80.79Q566.07 77.91 566.82 75.42Q567.56 72.93 567.56 71.67Q567.56 70.23 565.49 69.26Q563.42 68.3 557.85 67.85V64.26H583.68ZM632.74 117.26Q631.17 119.82 628.94 122.09Q626.72 124.36 623.89 125.98Q620.88 127.69 617.8 128.56Q614.72 129.44 610.73 129.44Q604.08 129.44 599.25 127.55Q594.42 125.66 591.28 122.47Q588.13 119.29 586.58 114.95Q585.03 110.62 585.03 105.54Q585.03 100.96 586.72 96.76Q588.4 92.56 591.5 89.28Q594.55 86.09 599.2 84.11Q603.85 82.13 609.6 82.13Q615.89 82.13 619.94 83.66Q623.98 85.19 626.63 87.88Q629.19 90.45 630.36 93.93Q631.53 97.41 631.53 101.23V104.15H601.16Q601.16 113.36 604.71 118.16Q608.26 122.97 615.98 122.97Q620.21 122.97 623.57 120.66Q626.94 118.34 629.32 114.79ZM615.58 100.19Q615.58 97.5 615.31 94.67Q615.04 91.84 614.37 90.04Q613.6 87.93 612.28 86.85Q610.95 85.77 608.93 85.77Q605.47 85.77 603.4 89.28Q601.34 92.78 601.16 100.37ZM696.35 128H669.3V124.72Q670.16 124.63 671.37 124.5Q672.58 124.36 673.21 124.05Q674.16 123.55 674.56 122.61Q674.96 121.67 674.96 119.82V98.8Q674.96 94.22 673.28 91.91Q671.6 89.59 668.32 89.59Q666.52 89.59 664.97 90.13Q663.42 90.67 661.94 91.7Q660.63 92.6 659.85 93.54Q659.06 94.49 658.52 95.21V119.33Q658.52 120.9 658.97 121.96Q659.42 123.01 660.46 123.55Q661.17 123.96 662.25 124.27Q663.33 124.59 664.36 124.72V128H637.05V124.72Q638.17 124.63 639.32 124.47Q640.46 124.32 641.27 124.05Q642.71 123.55 643.25 122.52Q643.79 121.49 643.79 119.82V93.68Q643.79 92.29 643.07 90.94Q642.35 89.59 641.18 88.74Q640.38 88.2 639.14 87.84Q637.9 87.48 636.42 87.35V84.07L657.85 82.9L658.52 83.57V90.09H658.7Q659.96 88.96 661.76 87.39Q663.55 85.82 665.08 84.83Q666.74 83.75 669.44 82.99Q672.13 82.22 675.19 82.22Q682.51 82.22 686.17 86.38Q689.83 90.54 689.83 97.41V119.42Q689.83 121.08 690.33 122.07Q690.82 123.06 692.17 123.64Q692.89 123.96 693.94 124.27Q695 124.59 696.35 124.72ZM758.61 127.06 736.46 128.36 735.79 127.73V123.6L735.47 123.51Q733.27 125.89 729.52 127.66Q725.77 129.44 721.95 129.44Q712.88 129.44 706.99 122.7Q701.11 115.96 701.11 105.27Q701.11 95.79 707.69 89.01Q714.27 82.22 723.62 82.22Q727.3 82.22 730.53 83.06Q733.77 83.89 735.7 85.01V70.32Q735.7 68.66 735.03 67.2Q734.35 65.74 733.23 64.93Q731.84 63.94 729.75 63.51Q727.66 63.09 725.55 62.91V59.63L749.8 58.46L750.48 59.18V118.07Q750.48 119.78 751.04 120.95Q751.6 122.12 752.86 122.79Q753.8 123.28 755.62 123.51Q757.44 123.73 758.61 123.78ZM735.7 119.06V93.68Q735.38 92.65 734.82 91.39Q734.26 90.13 733.27 89.01Q732.38 88.06 730.87 87.35Q729.37 86.63 727.48 86.63Q722.99 86.63 720.11 91.7Q717.24 96.78 717.24 106.03Q717.24 109.67 717.75 112.57Q718.27 115.47 719.57 117.85Q720.88 120.23 722.92 121.58Q724.96 122.92 727.84 122.92Q730.58 122.92 732.38 121.87Q734.17 120.81 735.7 119.06ZM812.88 127.06Q810.9 127.91 808.2 128.63Q805.51 129.35 802.5 129.35Q796.97 129.35 794.37 127.71Q791.76 126.07 790.82 123.01H790.55Q789.02 124.54 787.61 125.62Q786.19 126.7 784.57 127.46Q782.46 128.45 780.51 128.92Q778.55 129.39 775.05 129.39Q769.84 129.39 766.16 126.32Q762.47 123.24 762.47 118.16Q762.47 115.24 763.28 113.2Q764.09 111.15 765.57 109.58Q766.92 108.14 768.69 107.2Q770.47 106.26 772.58 105.45Q776.62 103.97 782.28 102.37Q787.94 100.78 790.55 99.52V95.21Q790.55 94.08 790.37 92.24Q790.19 90.4 789.61 89.14Q788.98 87.71 787.63 86.72Q786.28 85.73 784.08 85.73Q782.1 85.73 780.78 86.29Q779.45 86.85 778.64 87.44Q778.78 88.33 779.41 90.18Q780.04 92.02 780.04 93.72Q780.04 94.49 779.63 95.63Q779.23 96.78 778.46 97.45Q777.43 98.35 776.15 98.85Q774.87 99.34 772.22 99.34Q768.45 99.34 766.52 97.52Q764.58 95.7 764.58 92.78Q764.58 90.27 766.58 88.27Q768.58 86.27 771.46 84.96Q774.29 83.62 777.97 82.88Q781.65 82.13 784.8 82.13Q789.16 82.13 792.79 82.65Q796.43 83.17 799.35 84.79Q802.14 86.36 803.78 89.34Q805.42 92.33 805.42 97.14Q805.42 102.21 805.22 109.18Q805.01 116.14 805.01 118.34Q805.01 120.36 805.62 121.53Q806.23 122.7 807.48 123.28Q808.25 123.64 809.89 123.71Q811.53 123.78 812.88 123.78ZM790.55 103.65Q788.03 104.51 785.56 105.61Q783.09 106.71 781.52 107.92Q779.86 109.18 778.91 111.13Q777.97 113.09 777.97 115.74Q777.97 119.24 779.57 120.81Q781.16 122.38 783.5 122.38Q785.97 122.38 787.56 121.37Q789.16 120.36 790.37 118.88ZM837.13 129.53Q832.78 129.53 828.62 128.25Q824.46 126.97 822.17 125.53L820.83 128.58H817.32L816.74 111.83H820.02Q820.69 113.85 822.26 116.39Q823.84 118.93 825.86 120.95Q827.97 122.97 830.69 124.36Q833.4 125.75 836.5 125.75Q840.59 125.75 842.59 124.16Q844.59 122.56 844.59 119.24Q844.59 117.44 843.69 116.28Q842.79 115.11 841.22 114.25Q839.47 113.36 837.38 112.73Q835.29 112.1 832.24 111.2Q829.18 110.3 827 109.38Q824.82 108.46 822.49 106.48Q820.47 104.73 819.25 102.26Q818.04 99.79 818.04 96.38Q818.04 90.04 823.36 86.13Q828.69 82.22 837.31 82.22Q841.4 82.22 844.84 83.06Q848.27 83.89 850.61 84.88L851.55 82.22H854.97L855.69 97.54H852.5Q850.92 92.87 847.11 89.48Q843.29 86.09 838.88 86.09Q835.43 86.09 833.45 87.53Q831.47 88.96 831.47 91.52Q831.47 94.94 834.37 96.46Q837.27 97.99 842.48 99.34Q850.52 101.41 854.25 104.98Q857.98 108.55 857.98 114.07Q857.98 121.44 852.2 125.48Q846.43 129.53 837.13 129.53Z" fill="#E2552D"/></svg>
+      </a>
+      <p>Anúncios, site e relatório semanal para negócios locais que querem saber de onde vem cada cliente.</p>
+    </div>
+    <div>
+      <h4>Acesso rápido</h4>
+      <ul>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#servicos">Instagram e Facebook Ads</a></li>
+        <li><a href="#servicos">Google Ads</a></li>
+        <li><a href="#servicos">Site e landing page</a></li>
+        <li><a href="#como-medimos">Relatório semanal</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li>WhatsApp: <span data-contato="whatsapp">a definir</span></li>
+        <li>E-mail: <span data-contato="email">a definir</span></li>
+        <li>Instagram: <span data-contato="instagram">a definir</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom"><span>© 2026 JuditeVendas. Todos os direitos reservados.</span><a href="#inicio">Voltar ao topo</a></div>
+  </div>
+</footer>
+
+<script>
+/* Preencha aqui os contatos da JuditeVendas. WhatsApp só com números: 55 + DDD + número. */
+const CONFIG = {
+  whatsapp: "",   // ex.: "5527999990000"
+  email: "",      // ex.: "contato@juditevendas.com.br"
+  instagram: ""   // ex.: "@juditevendas"
+};
+
+(function () {
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Contatos */
+  function formatPhone(d) {
+    const n = d.replace(/^55/, "");
+    if (n.length === 11) return "(" + n.slice(0, 2) + ") " + n.slice(2, 7) + "-" + n.slice(7);
+    if (n.length === 10) return "(" + n.slice(0, 2) + ") " + n.slice(2, 6) + "-" + n.slice(6);
+    return d;
+  }
+  const shown = {
+    whatsapp: CONFIG.whatsapp ? formatPhone(CONFIG.whatsapp) : "",
+    email: CONFIG.email,
+    instagram: CONFIG.instagram
+  };
+  document.querySelectorAll("[data-contato]").forEach(function (el) {
+    const v = shown[el.dataset.contato];
+    if (v) el.textContent = v;
+  });
+
+  /* Menu */
+  const toggle = document.querySelector(".nav-toggle");
+  const menu = document.getElementById("menu");
+  function setMenu(open) {
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    menu.classList.toggle("is-open", open);
+  }
+  toggle.addEventListener("click", function () { setMenu(toggle.getAttribute("aria-expanded") !== "true"); });
+  menu.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
+
+  /* Link ativo conforme a rolagem */
+  const links = Array.prototype.slice.call(menu.querySelectorAll('a[href^="#"]:not(.btn)'));
+  const byId = {};
+  links.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        const a = byId[en.target.id];
+        if (!a) return;
+        links.forEach(function (l) { l.classList.remove("is-active"); });
+        a.classList.add("is-active");
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    Object.keys(byId).forEach(function (id) { const s = document.getElementById(id); if (s) io.observe(s); });
+  }
+
+  /* Carrossel */
+  const carousel = document.querySelector(".carousel");
+  const slides = Array.prototype.slice.call(carousel.querySelectorAll(".slide"));
+  const dots = Array.prototype.slice.call(carousel.querySelectorAll(".dot"));
+  let current = 0;
+  let timer = null;
+  function go(n) {
+    current = (n + slides.length) % slides.length;
+    slides.forEach(function (s, k) {
+      const on = k === current;
+      s.classList.toggle("is-active", on);
+      s.setAttribute("aria-hidden", on ? "false" : "true");
+      s.inert = !on;
+    });
+    dots.forEach(function (d, k) { d.setAttribute("aria-current", k === current ? "true" : "false"); });
+  }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  function start() { if (reduce) return; stop(); timer = setInterval(function () { go(current + 1); }, 7000); }
+  carousel.querySelector('[data-car="prev"]').addEventListener("click", function () { go(current - 1); start(); });
+  carousel.querySelector('[data-car="next"]').addEventListener("click", function () { go(current + 1); start(); });
+  dots.forEach(function (d, k) { d.addEventListener("click", function () { go(k); start(); }); });
+  carousel.addEventListener("mouseenter", stop);
+  carousel.addEventListener("mouseleave", start);
+  carousel.addEventListener("focusin", stop);
+  carousel.addEventListener("focusout", function (e) { if (!carousel.contains(e.relatedTarget)) start(); });
+  document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else start(); });
+  go(0);
+  start();
+
+  /* Máscara de telefone */
+  function maskPhone(v) {
+    const d = v.replace(/\D/g, "").slice(0, 11);
+    if (!d.length) return "";
+    if (d.length <= 2) return "(" + d;
+    if (d.length <= 6) return "(" + d.slice(0, 2) + ") " + d.slice(2);
+    if (d.length <= 10) return "(" + d.slice(0, 2) + ") " + d.slice(2, 6) + "-" + d.slice(6);
+    return "(" + d.slice(0, 2) + ") " + d.slice(2, 7) + "-" + d.slice(7);
+  }
+  function checkPhone(input) {
+    const digits = input.value.replace(/\D/g, "").length;
+    input.setCustomValidity(digits >= 10 ? "" : "Informe o WhatsApp com DDD, por exemplo (27) 99999-0000.");
+  }
+  ["at-whats", "ct-whats"].forEach(function (id) {
+    const el = document.getElementById(id);
+    el.addEventListener("input", function () { el.value = maskPhone(el.value); checkPhone(el); });
+  });
+  ["at-nome", "ct-nome"].forEach(function (id) {
+    const el = document.getElementById(id);
+    el.addEventListener("input", function () { el.setCustomValidity(""); });
+  });
+  function checkName(input) {
+    input.setCustomValidity(input.value.trim() ? "" : "Informe seu nome.");
+  }
+
+  /* Atalho: leva os dados para o formulário de contato */
+  const atalho = document.getElementById("atalho-form");
+  atalho.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const nome = document.getElementById("at-nome");
+    const whats = document.getElementById("at-whats");
+    checkName(nome); checkPhone(whats);
+    if (!atalho.reportValidity()) return;
+    document.getElementById("ct-nome").value = nome.value.trim();
+    document.getElementById("ct-whats").value = whats.value;
+    document.getElementById("ct-tipo").value = document.getElementById("at-tipo").value;
+    document.getElementById("contato").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+    setTimeout(function () { document.getElementById("ct-negocio").focus({ preventScroll: true }); }, reduce ? 0 : 600);
+  });
+
+  /* Contato: monta a mensagem para o WhatsApp */
+  const form = document.getElementById("contato-form");
+  const result = document.getElementById("ct-result");
+  const preview = document.getElementById("ct-preview");
+  const waLink = document.getElementById("ct-wa");
+  const copyBtn = document.getElementById("ct-copy");
+  const note = document.getElementById("ct-note");
+  let message = "";
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const nome = document.getElementById("ct-nome");
+    const whats = document.getElementById("ct-whats");
+    checkName(nome); checkPhone(whats);
+    if (!form.reportValidity()) return;
+    const negocio = document.getElementById("ct-negocio").value.trim();
+    const tipo = document.getElementById("ct-tipo").value;
+    const texto = document.getElementById("ct-msg").value.trim();
+    const lines = [
+      "Olá! Vim pelo site da JuditeVendas e quero um diagnóstico gratuito.",
+      "",
+      "Nome: " + nome.value.trim(),
+      "WhatsApp: " + whats.value
+    ];
+    if (negocio) lines.push("Negócio: " + negocio);
+    if (tipo) lines.push("Tipo: " + tipo);
+    if (texto) lines.push("O que quero melhorar: " + texto);
+    message = lines.join("\n");
+    preview.textContent = message;
+
+    if (CONFIG.whatsapp) {
+      waLink.href = "https://wa.me/" + CONFIG.whatsapp.replace(/\D/g, "") + "?text=" + encodeURIComponent(message);
+      waLink.hidden = false;
+      note.textContent = "O WhatsApp abre com a mensagem pronta. É só tocar em enviar.";
+    } else {
+      waLink.hidden = true;
+      note.textContent = "O número de WhatsApp da JuditeVendas ainda não foi cadastrado no site. Copie a mensagem para enviar quando o número estiver disponível.";
+    }
+    result.hidden = false;
+    copyBtn.textContent = "Copiar mensagem";
+    result.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "nearest" });
+  });
+
+  copyBtn.addEventListener("click", function () {
+    function selectText() {
+      const range = document.createRange();
+      range.selectNodeContents(preview);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      copyBtn.textContent = "Texto selecionado: use Ctrl+C";
+    }
+    try {
+      navigator.clipboard.writeText(message).then(function () {
+        copyBtn.textContent = "Copiado";
+      }, selectText);
+    } catch (err) {
+      selectText();
+    }
+    setTimeout(function () { copyBtn.textContent = "Copiar mensagem"; }, 3000);
+  });
+})();
+</script>
+</body>
+</html>
