@@ -31,6 +31,20 @@ Para ver no computador antes de subir, abra o `index.html` no navegador.
 
 O formulário não envia nada para servidor. Ele monta uma mensagem com os dados do visitante e abre o WhatsApp da JuditeVendas com o texto pronto. Enquanto `CONFIG.whatsapp` estiver vazio, a página só mostra a mensagem e o botão de copiar.
 
+## Segurança (CSP)
+
+O `<head>` tem uma Content-Security-Policy que só deixa rodar o script do fim da página, identificado pelo hash `sha256` dele no `script-src`. **Se o script mudar, o hash tem que mudar junto**, senão o JavaScript para de funcionar: o menu, o carrossel e o formulário deixam de responder.
+
+Para gerar o hash novo, rode na pasta do repo:
+
+```
+python -c "import re,hashlib,base64;s=re.search(r'<script>(.*?)</script>',open('index.html',encoding='utf-8').read(),re.S).group(1);print(base64.b64encode(hashlib.sha256(s.encode()).digest()).decode())"
+```
+
+Outra forma é abrir a página com o hash antigo e ver o console do navegador (F12). O erro de CSP mostra o hash esperado.
+
+Ao adicionar o Pixel da Meta, libere `https://connect.facebook.net` no `script-src` e `https://www.facebook.com` no `img-src` e no `connect-src`. O token da API de Conversões **nunca** entra neste repo, porque ele é público.
+
 ## Pendências
 
 - [ ] Preencher WhatsApp, e-mail e Instagram no `CONFIG`
