@@ -6,13 +6,18 @@
 </p>
 
 <p align="center">
-  Anúncios, site e relatório semanal para negócios locais.<br>
+  Agência digital: sites, landing pages, tráfego pago, conteúdo e rastreamento.<br>
   <a href="https://juditevendas.github.io">juditevendas.github.io</a>
 </p>
 
 ## O que é
 
-Site institucional da JuditeVendas. É uma página estática em HTML, CSS e JavaScript, sem etapa de build, publicada pelo GitHub Pages a partir da branch `main`.
+Site institucional da JuditeVendas **como agência digital** (frente 1 do plano de 90 dias). Por decisão dos sócios, ele não mostra produtos de afiliado: as contas COZ e TEC terão páginas de links próprias, com outra identidade.
+
+São duas páginas estáticas em HTML e CSS, sem etapa de build, publicadas pelo GitHub Pages a partir da branch `main`:
+
+- `index.html`: o site, com serviços, como trabalhamos, portfólio, para quem é, como cobramos, dúvidas e contato;
+- `privacidade.html`: a Política de Privacidade (LGPD). Não tem JavaScript.
 
 ## Como editar
 
@@ -47,7 +52,9 @@ Ao adicionar o Pixel da Meta, libere `https://connect.facebook.net` no `script-s
 
 ## Pendências
 
-- [ ] Preencher WhatsApp, e-mail e Instagram no `CONFIG`
-- [ ] Revisar os compromissos da faixa de números: diagnóstico em 48h, site em 7 dias, 1 relatório por semana, sem fidelidade
-- [ ] Trocar a seção "Para quem é" ou somar depoimentos reais quando houver clientes
+- [ ] Preencher WhatsApp, e-mail e Instagram no `CONFIG` e o e-mail e o CNPJ na `privacidade.html`
+- [ ] Confirmar os compromissos que estão no ar: diagnóstico em 48h, proposta por escrito, relatório semanal nos serviços de tráfego, sem fidelidade nos mensais. O "site em 7 dias" saiu porque ninguém confirmou o prazo
+- [ ] Confirmar na Política de Privacidade o prazo de guarda dos contatos que não viraram cliente (está 12 meses)
+- [ ] Portfólio: trocar os 3 cartões "vão aparecer aqui" por projetos reais, com autorização de cada cliente
+- [ ] Opcional: página de Termos de Uso (o plano de 90 dias cita)
 - [ ] Opcional: domínio próprio, com arquivo `CNAME` e ajuste de DNS
